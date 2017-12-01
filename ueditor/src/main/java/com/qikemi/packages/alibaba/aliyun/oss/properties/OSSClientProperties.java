@@ -1,16 +1,16 @@
 package com.qikemi.packages.alibaba.aliyun.oss.properties;
 
+import com.qikemi.packages.utils.SystemUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
-
-import com.qikemi.packages.utils.SystemUtil;
-
 public class OSSClientProperties {
 
-	private static Logger logger = Logger.getLogger(OSSClientProperties.class);
+	private static Logger logger = LoggerFactory.getLogger(OSSClientProperties.class);
 	
 	private static Properties OSSKeyProperties = new Properties();
 	// 阿里云是否启用配置

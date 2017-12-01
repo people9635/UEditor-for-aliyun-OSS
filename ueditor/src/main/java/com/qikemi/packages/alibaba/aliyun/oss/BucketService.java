@@ -1,12 +1,12 @@
 package com.qikemi.packages.alibaba.aliyun.oss;
 
-import java.util.List;
-
-import org.apache.log4j.Logger;
-
 import com.aliyun.openservices.oss.OSSClient;
 import com.aliyun.openservices.oss.model.Bucket;
 import com.aliyun.openservices.oss.model.CannedAccessControlList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 /**
  * Bucket是OSS上的命名空间，也是计费、权限控制、日志记录等高级功能的管理实体；Bucket名称在整个OSS服务中具有全局唯一性，且不能修改；
@@ -18,7 +18,7 @@ import com.aliyun.openservices.oss.model.CannedAccessControlList;
  */
 public class BucketService {
 
-	private static Logger logger = Logger.getLogger(BucketService.class);
+	private static Logger logger = LoggerFactory.getLogger(OSSClientFactory.class);
 
 	/**
 	 * 创建一个Bucket，如果创建成功，则返回新的Bucket <br>

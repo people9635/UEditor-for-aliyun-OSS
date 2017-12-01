@@ -1,20 +1,19 @@
 package com.qikemi.packages.baidu.ueditor.upload;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.log4j.Logger;
-import org.json.JSONObject;
-
 import com.aliyun.openservices.oss.OSSClient;
 import com.aliyun.openservices.oss.model.PutObjectResult;
 import com.qikemi.packages.alibaba.aliyun.oss.ObjectService;
 import com.qikemi.packages.alibaba.aliyun.oss.properties.OSSClientProperties;
 import com.qikemi.packages.utils.SystemUtil;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * 同步上传文件到阿里云OSS<br>
@@ -23,7 +22,7 @@ import com.qikemi.packages.utils.SystemUtil;
  */
 public class SynUploader extends Thread {
 
-	private static Logger logger = Logger.getLogger(SynUploader.class);
+	private static Logger logger = LoggerFactory.getLogger(SynUploader.class);
 
 	public boolean upload(JSONObject stateJson, OSSClient client,
 			HttpServletRequest request) {

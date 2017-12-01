@@ -1,11 +1,11 @@
 package com.qikemi.packages.baidu.ueditor.upload;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.log4j.Logger;
-import org.json.JSONObject;
-
 import com.aliyun.openservices.oss.OSSClient;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 异步上传文件到阿里云OSS
@@ -14,7 +14,7 @@ import com.aliyun.openservices.oss.OSSClient;
  */
 public class AsynUploaderThreader extends Thread {
 
-	private static Logger logger = Logger.getLogger(AsynUploaderThreader.class);
+	private static Logger logger = LoggerFactory.getLogger(AsynUploaderThreader.class);
 	private JSONObject stateJson = null;
 	private OSSClient client = null;
 	private HttpServletRequest request = null;
