@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>cn.xiexianbin</groupId>
-        <artifactId>ueditor</artifactId>
-        <version>1.0.0</version>
-    </parent>
+    <!--<parent>-->
+        <!--<groupId>cn.xiexianbin</groupId>-->
+        <!--<artifactId>ueditor</artifactId>-->
+        <!--<version>1.0.0</version>-->
+    <!--</parent>-->
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.xiexianbin.ueditor</groupId>
     <artifactId>UEditor-for-aliyun-OSS</artifactId>
@@ -104,22 +104,22 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <!-- <version>3.1</version> -->
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <!-- war包插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-war-plugin</artifactId>-->
+                <!--<version>2.4</version>-->
+                <!--<configuration>-->
+                    <!--<source>${jdk.version}</source>-->
+                    <!--<target>${jdk.version}</target>-->
+                    <!--<encoding>UTF-8</encoding>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
 
             <!-- 源码插件 -->
             <plugin>
